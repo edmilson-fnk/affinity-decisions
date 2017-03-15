@@ -1,40 +1,37 @@
 package mtg;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import mtg.deck.Card;
 import mtg.deck.Deck;
+import mtg.game.Hand;
+import mtg.game.Library;
 import mtg.game.Shuffling;
 import mtg.utils.Lists;
-import mtg.utils.Utils;
 
 public class Statistics {
 
 	public static void main(String[] args) {
 		Deck deck = Lists.affinity();
-		Map<String, Integer> mapa = new HashMap<String, Integer>();
+		Map<String, Integer> map = new HashMap<String, Integer>();
 		int qtd = 1000000;
 		
 		for (int i = 0; i < qtd; i++) {
-			Shuffling.shuffleCards(deck);
+			Library library = Shuffling.shuffleDeck(deck);
 			
-			List<Card> mao = Shuffling.draw(deck, 6);
+			Hand hand = library.draw(6);
 			
-			String hash = Utils.hash(mao);
+			String hash = hand.getHash();
 			
-			if (!mapa.containsKey(hash)) {
-				mapa.put(hash, 0);
+			if (!map.containsKey(hash)) {
+				map.put(hash, 0);
 			}
 			
-			mapa.put(hash, mapa.get(hash) + 1);
-			
-			Shuffling.reshuffleHand(deck, mao);
+			map.put(hash, map.get(hash) + 1);
 		}
 		
-		for (Entry<String, Integer> entrada : mapa.entrySet()) {
+		for (Entry<String, Integer> entrada : map.entrySet()) {
 			float num = entrada.getValue().floatValue()/qtd;
 			
 			if (num > 0.0072) {
