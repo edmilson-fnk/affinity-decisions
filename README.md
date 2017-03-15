@@ -15,3 +15,4 @@ Run the main method at Statistics.java and you can see the best chance hands wit
 # 3. Future changes
 - Actually save the full hand instead of it's hash code before showing the results
 - Show the N most likely hands 
+- Make it intelligent enough to play the game and decide whether or not mulligan, saving it's results for further analysis.
