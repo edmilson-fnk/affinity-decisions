@@ -10,9 +10,9 @@ import mtg.deck.Deck;
 
 public class Shuffling {
 
-	public static void reshuffleHand(Deck deck, List<Card> mao) {
-		deck.getDeckList().addAll(mao);
-		shuffleCards(deck);
+	public static void reshuffleHand(Deck library, List<Card> mao) {
+		library.getDeckList().addAll(mao);
+		shuffleCards(library);
 	}
 	
 	public static void shuffleCards(Deck deck) {

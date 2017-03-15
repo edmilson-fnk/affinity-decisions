@@ -16,12 +16,12 @@ public class Statistics {
 	public static void main(String[] args) {
 		Deck deck = Lists.affinity();
 		Map<String, Integer> mapa = new HashMap<String, Integer>();
-		int qtd = 5000000;
+		int qtd = 1000000;
 		
 		for (int i = 0; i < qtd; i++) {
 			Shuffling.shuffleCards(deck);
 			
-			List<Card> mao = Shuffling.draw7(deck);
+			List<Card> mao = Shuffling.draw(deck, 6);
 			
 			String hash = Utils.hash(mao);
 			
@@ -37,7 +37,7 @@ public class Statistics {
 		for (Entry<String, Integer> entrada : mapa.entrySet()) {
 			float num = entrada.getValue().floatValue()/qtd;
 			
-			if (num > 0.0052) {
+			if (num > 0.0072) {
 				String chave = entrada.getKey();
 				System.out.println(num + " " + chave);
 			}
