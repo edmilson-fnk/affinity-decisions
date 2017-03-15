@@ -4,11 +4,11 @@ import java.util.List;
 
 import mtg.deck.Card;
 import mtg.deck.Deck;
-import mtg.deck.Lists;
-import mtg.jogo.Shuffling;
+import mtg.game.Shuffling;
+import mtg.utils.Lists;
 import mtg.utils.Utils;
 
-public class Match {
+public class Simulation {
 
 	public static void main(String[] args) {
 		firstHand();
@@ -19,7 +19,7 @@ public class Match {
 		
 		Shuffling.shuffleCards(deck);
 		
-		List<Card> hand = deck.draw7();
+		List<Card> hand = Shuffling.draw7(deck);
 		
 		String hash = Utils.hash(hand);
 		System.out.println(hash);

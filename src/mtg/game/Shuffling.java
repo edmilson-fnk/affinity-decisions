@@ -1,4 +1,4 @@
-package mtg.jogo;
+package mtg.game;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -22,6 +22,10 @@ public class Shuffling {
 	
 	public static void pileShuffle(Deck deck) {
 		
+	}
+
+	public static List<Card> draw7(Deck deck) {
+		return Shuffling.draw(deck, 7);
 	}
 
 	public static List<Card> draw(Deck deck, int qtd) {

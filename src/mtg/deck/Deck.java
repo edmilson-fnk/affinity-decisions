@@ -3,8 +3,6 @@ package mtg.deck;
 import java.util.LinkedList;
 import java.util.List;
 
-import mtg.jogo.Shuffling;
-
 public class Deck {
 
 	private String name;
@@ -38,14 +36,6 @@ public class Deck {
 	
 	public void setSideboard(List<Card> sideboard) {
 		this.sideboard = sideboard;
-	}
-	
-	public List<Card> draw7() {
-		return Shuffling.draw(this, 7);
-	}
-
-	public List<Card> draw(int qtd) {
-		return Shuffling.draw(this, qtd);
 	}
 
 }

@@ -7,21 +7,21 @@ import java.util.Map.Entry;
 
 import mtg.deck.Card;
 import mtg.deck.Deck;
-import mtg.deck.Lists;
-import mtg.jogo.Shuffling;
+import mtg.game.Shuffling;
+import mtg.utils.Lists;
 import mtg.utils.Utils;
 
-public class Estatistica {
+public class Statistics {
 
 	public static void main(String[] args) {
 		Deck deck = Lists.affinity();
 		Map<String, Integer> mapa = new HashMap<String, Integer>();
-		int qtd = 500000;
+		int qtd = 5000000;
 		
 		for (int i = 0; i < qtd; i++) {
 			Shuffling.shuffleCards(deck);
 			
-			List<Card> mao = deck.draw(7);
+			List<Card> mao = Shuffling.draw7(deck);
 			
 			String hash = Utils.hash(mao);
 			

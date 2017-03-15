@@ -1,10 +1,11 @@
-package mtg.deck;
+package mtg.utils;
 
 import java.util.List;
 
+import mtg.deck.Card;
+import mtg.deck.Deck;
 import mtg.deck.enums.CardClassification;
 import mtg.deck.enums.CardName;
-import mtg.utils.Utils;
 
 public class Lists {
 
@@ -21,7 +22,6 @@ public class Lists {
 		deckList.addAll(Utils.createCard(CardName.GLIMMERVOID, CardClassification.LAND, 3));
 		deckList.addAll(Utils.createCard(CardName.ISLAND, CardClassification.LAND, 1));
 		deckList.addAll(Utils.createCard(CardName.MOUNTAIN, CardClassification.LAND, 1));
-		
 		deckList.addAll(Utils.createCard(CardName.ARCBOUND_RAVAGER, CardClassification.BOMB_2, 4));
 		deckList.addAll(Utils.createCard(CardName.ETCHED_CHAMPION, CardClassification.BOMB_3, 3));
 		deckList.addAll(Utils.createCard(CardName.MASTER_ETHERIUM, CardClassification.BOMB_3, 1));

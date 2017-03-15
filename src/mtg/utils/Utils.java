@@ -37,7 +37,7 @@ public class Utils {
 		}
 	}
 
-	public static void mostrarLista(List<Card> cartas) {
+	public static void showList(List<Card> cartas) {
 		Map<CardName, Integer> mapa = new HashMap<CardName, Integer>();
 		
 		for (Card c : cartas) {
