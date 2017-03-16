@@ -1,4 +1,6 @@
-package mtg.game;
+package mtg.game.instance;
+
+import mtg.game.Player;
 
 public class Match {
 

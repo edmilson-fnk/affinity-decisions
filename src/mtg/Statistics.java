@@ -15,7 +15,7 @@ public class Statistics {
 	public static void main(String[] args) {
 		Deck deck = Lists.affinity();
 		Map<String, Integer> map = new HashMap<String, Integer>();
-		int qtd = 1000000;
+		int qtd = 500000;
 		
 		for (int i = 0; i < qtd; i++) {
 			Library library = Shuffling.shuffleDeck(deck);

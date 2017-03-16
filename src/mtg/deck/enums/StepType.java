@@ -1,0 +1,16 @@
+package mtg.deck.enums;
+
+public enum StepType {
+
+	UNTAP,
+	UPKEEP,
+	DRAW,
+	BEGGINING_OF_COMBAT,
+	DECLARE_ATTACKERS,
+	DECLARE_BLOCKERS,
+	COMBAT_DAMAGE,
+	END_OF_COMBAT,
+	END_STEP,
+	CLEAN_UP;
+	
+}
