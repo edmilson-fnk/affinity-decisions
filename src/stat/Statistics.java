@@ -17,21 +17,45 @@ import mtg.utils.Lists;
 public class Statistics {
 
 	public static void main(String[] args) {
-//		Deck deck = Lists.affinity();
-		Deck deck = Lists.burn();
+		Deck deck = Lists.affinity();
+//		Deck deck = Lists.burn();
 		
 		Map<String, Float> probs = getProbabilities(deck);
 		
+//		greaterThan(probs);
+//		topN(probs);
+		
+//		String hand = "[^L]*LLL";
+		String hand = ".*M.*";
+		Float p = getHandProbability(probs, hand);
+		System.out.println(String.format(Locale.ENGLISH, "Probability of hand {" + hand + "}: %.3f\n%%", p*100));
+	}
+
+	private static void greaterThan(Map<String, Float> probs) {
 		double perc = 0.020;
 		Map<String, Float> greater = getMostProbables(probs, perc);
-		
+		println(greater, String.format(Locale.ENGLISH, "More probable than %.2f%%", perc*100));
+	}
+
+	private static void topN(Map<String, Float> probs) {
 		int num = 5;
 		Map<String, Float> most = getMostProbables(probs, num);
-		
 		println(most, String.format(Locale.ENGLISH, "Top %d common hands", num));
+	}
+
+	private static Float getHandProbability(Map<String, Float> probs, String handRegex) {
+		Float p = 0f;
+		for (Entry<String, Float> e : probs.entrySet()) {
+			if (matchHand(e.getKey(), handRegex)) {
+				p += e.getValue();
+			}
+		}
 		
-		println(greater, String.format(Locale.ENGLISH, "More probable than %.2f", perc*100));
-		
+		return p;
+	}
+
+	private static boolean matchHand(String hand, String regex) {
+		return hand.matches(regex);
 	}
 
 	private static void println(Map<String, Float> map, String title) {
