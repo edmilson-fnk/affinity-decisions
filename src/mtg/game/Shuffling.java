@@ -17,6 +17,8 @@ public class Shuffling {
 	}
 	
 	public static Library pileShuffleDeck(Deck deck, int num) {
+		Collections.shuffle(deck.getDeckList(), new Random());
+		
 		List<List<Card>> piles = new ArrayList<List<Card>>();
 		
 		// create 'num' piles

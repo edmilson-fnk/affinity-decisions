@@ -11,7 +11,13 @@ public enum CardClassification {
 	DIRECT_DAMAGE("Damage","D"),
 	DRAW("Draw","A"),
 	REMOVAL("Removal","R"),
-	LAND("Land","L");
+	LAND("Land","L"),
+
+	DIRECT_DAMAGE_BURN_1("Damage","D"),
+	DIRECT_DAMAGE_BURN_2("Damage","A"),
+	CREATURE_BURN_1("Damage","C"),
+	CREATURE_BURN_2("Damage","R"),
+	;
 	
 	String name;
 	String code;

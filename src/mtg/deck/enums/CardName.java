@@ -12,7 +12,7 @@ public enum CardName {
 	MEMNITE("Memnite"),
 	MOX_OPAL("Mox Opal"),
 	GALVANIC_BLAST("Galvanic Blast"),
-	SPRINGLEAF_DUM("Springleaf Drum"),
+	SPRINGLEAF_DRUMS("Springleaf Drum"),
 	SIGNAL_PEST("Signal Pest"),
 	VAULT_SKIRGE("Vault Skirge"),
 	CRANIAL_PLATING("Cranial Plating"),
@@ -21,7 +21,25 @@ public enum CardName {
 	MASTER_ETHERIUM("Master of Etherium"),
 	ETCHED_CHAMPION("Etched Champion"),
 	THOUGHTCAST("THoughtcast"),
-	SPELLSKITE("Spellskite")
+	SPELLSKITE("Spellskite"),
+	
+	ARID_MESA("Arid Mesa"),
+	BLOODSTAINED_MIRE("Bloodstained Mire"),
+	INSPIRING_VANTAGE("Inspiring Vantage"),
+	SACRED_FOUNDRY("Sacred Foundry"),
+	STOMPING_GROUND("Stomping Ground"),
+	WOODED_FOOTHILLS("Wooded Foothills"),
+	EIDOLON_GR("Eidolon of the Great Revel"),
+	GOBLIN_GUIDE("Goblin Guide"),
+	GRIM_LAVA("Grim Lavamancer"),
+	MONASTERY_SWIFTSPEAR("Monastery Swiftspear"),
+	BOROS_CHARM("Boros Charm"),
+	LAVA_SPIKE("Lava Spike"),
+	LIGHTNING_BOLT("Lightning Bolt"),
+	LIGHTNING_HELIX("Lightning Helix"),
+	RIFT_BOLT("Rift Bolt"),
+	SEARING_BLAZE("Searing Blaze"),
+	SKULLCRACK("Skullcrak")
 	;
 
 	String nome;

@@ -1,7 +1,6 @@
 package mtg.game;
 
 import java.util.LinkedList;
-import java.util.List;
 
 import mtg.deck.Card;
 import mtg.deck.Deck;
@@ -25,7 +24,7 @@ public class Library extends LinkedList<Card> {
 		this.deck = deck;
 	}
 
-	public List<Card> draw7() {
+	public Hand draw7() {
 		return this.draw(7);
 	}
 
