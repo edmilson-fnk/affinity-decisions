@@ -23,16 +23,16 @@ public class Statistics {
 		Map<String, Float> probs = getProbabilities(deck);
 		
 //		greaterThan(probs);
-//		topN(probs);
+		topN(probs);
 		
-//		String hand = "[^L]*LLL";
-		String hand = ".*M.*";
+//		String hand = "01BBLLL";
+		String hand = ".*0.*B.*L.*M.*N.*";
 		Float p = getHandProbability(probs, hand);
-		System.out.println(String.format(Locale.ENGLISH, "Probability of hand {" + hand + "}: %.3f\n%%", p*100));
+		System.out.println(String.format(Locale.ENGLISH, "Probability of hand {" + hand + "}: %.5f%%\n", p*100));
 	}
 
 	private static void greaterThan(Map<String, Float> probs) {
-		double perc = 0.020;
+		double perc = 0.004;
 		Map<String, Float> greater = getMostProbables(probs, perc);
 		println(greater, String.format(Locale.ENGLISH, "More probable than %.2f%%", perc*100));
 	}
