@@ -17,18 +17,19 @@ import mtg.utils.Lists;
 public class Statistics {
 
 	public static void main(String[] args) {
-		Deck deck = Lists.affinity();
+//		Deck deck = Lists.affinity();
+		Deck deck = Lists.trueAffinity();
 //		Deck deck = Lists.burn();
 		
 		Map<String, Float> probs = getProbabilities(deck);
 		
 //		greaterThan(probs);
-		topN(probs);
+//		topN(probs);
 		
-//		String hand = "01BBLLL";
-		String hand = ".*0.*B.*L.*M.*N.*";
+		String hand = ".*0.*0.*0.*";
+//		String hand = "0.*B.*L.*M.*N.*";
 		Float p = getHandProbability(probs, hand);
-		System.out.println(String.format(Locale.ENGLISH, "Probability of hand {" + hand + "}: %.5f%%\n", p*100));
+		System.out.println(String.format(Locale.ENGLISH, "Probability of hand {" + hand + "}: %.5f%%", p*100));
 	}
 
 	private static void greaterThan(Map<String, Float> probs) {
@@ -61,7 +62,7 @@ public class Statistics {
 	private static void println(Map<String, Float> map, String title) {
 		System.out.println(title + ":");
 		for (Entry<String, Float> entry : map.entrySet()) {
-			System.out.println(entry.getKey() + " " + entry.getValue());
+			System.out.println(String.format(Locale.ENGLISH, "%s %.5f%%", entry.getKey(), entry.getValue()*100));
 		}
 		System.out.println();
 	}

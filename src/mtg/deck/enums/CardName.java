@@ -12,7 +12,7 @@ public enum CardName {
 	MEMNITE("Memnite"),
 	MOX_OPAL("Mox Opal"),
 	GALVANIC_BLAST("Galvanic Blast"),
-	SPRINGLEAF_DRUMS("Springleaf Drum"),
+	SPRINGLEAF_DRUM("Springleaf Drum"),
 	SIGNAL_PEST("Signal Pest"),
 	VAULT_SKIRGE("Vault Skirge"),
 	CRANIAL_PLATING("Cranial Plating"),
@@ -22,6 +22,13 @@ public enum CardName {
 	ETCHED_CHAMPION("Etched Champion"),
 	THOUGHTCAST("THoughtcast"),
 	SPELLSKITE("Spellskite"),
+	
+	WELDING_JAR("Welding Jar"),
+	FROGMITE("Frogmite"),
+	MYR_ENFORCER("Myr Enforcer"),
+	CHALICE_VOID("Chalice of the Void"),
+	CONTESTED_WZ("Contested War Zone"),
+	BOMAT_COURIER("Bomat Courier"),
 	
 	ARID_MESA("Arid Mesa"),
 	BLOODSTAINED_MIRE("Bloodstained Mire"),

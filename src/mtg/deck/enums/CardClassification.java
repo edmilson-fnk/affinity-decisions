@@ -12,6 +12,10 @@ public enum CardClassification {
 	DRAW("Draw","A"),
 	REMOVAL("Removal","R"),
 	LAND("Land","L"),
+	ARTIFACT_LAND("Artifact Land","K"),
+
+	AFFINITY_4("Affinity 4","4"),
+	AFFINITY_7("Affinity 7","7"),
 
 	DIRECT_DAMAGE_BURN_1("Damage","D"),
 	DIRECT_DAMAGE_BURN_2("Damage","A"),

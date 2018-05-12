@@ -31,11 +31,45 @@ public class Lists {
 		
 		deckList.addAll(Utils.createCard(CardName.MEMNITE, CardClassification.COST_0, 3));
 		deckList.addAll(Utils.createCard(CardName.ORNITHOPTER, CardClassification.COST_0, 4));
+//		deckList.addAll(Utils.createCard(CardName.WELDING_JAR, CardClassification.COST_0, 2));
 		deckList.addAll(Utils.createCard(CardName.SIGNAL_PEST, CardClassification.COST_1, 4));
 		deckList.addAll(Utils.createCard(CardName.VAULT_SKIRGE, CardClassification.COST_1, 4));
 		deckList.addAll(Utils.createCard(CardName.GALVANIC_BLAST, CardClassification.DIRECT_DAMAGE, 4));
 		deckList.addAll(Utils.createCard(CardName.MOX_OPAL, CardClassification.MANA_SOURCE_M, 4));
-		deckList.addAll(Utils.createCard(CardName.SPRINGLEAF_DRUMS, CardClassification.MANA_SOURCE_N, 4));
+		deckList.addAll(Utils.createCard(CardName.SPRINGLEAF_DRUM, CardClassification.MANA_SOURCE_N, 4));
+		
+		return deck;
+	}
+	
+	public static Deck trueAffinity() {
+		Deck deck = new Deck();
+		
+		deck.setName("True Affinity");
+		
+		List<Card> deckList = deck.getDeckList();
+		
+		deckList.addAll(Utils.createCard(CardName.MOUNTAIN, CardClassification.LAND, 1));
+		deckList.addAll(Utils.createCard(CardName.BLINKMOTH_NEXUS, CardClassification.LAND, 4));
+		deckList.addAll(Utils.createCard(CardName.CONTESTED_WZ, CardClassification.LAND, 3));
+		deckList.addAll(Utils.createCard(CardName.DARKSTEEL_CITADEL, CardClassification.LAND, 4));
+
+		deckList.addAll(Utils.createCard(CardName.ARCBOUND_RAVAGER, CardClassification.BOMB_2, 4));
+		deckList.addAll(Utils.createCard(CardName.CRANIAL_PLATING, CardClassification.BOMB_2, 4));
+		
+		deckList.addAll(Utils.createCard(CardName.FROGMITE, CardClassification.AFFINITY_4, 4));
+		deckList.addAll(Utils.createCard(CardName.MYR_ENFORCER, CardClassification.AFFINITY_7, 4));
+		
+		deckList.addAll(Utils.createCard(CardName.BOMAT_COURIER, CardClassification.COST_1, 2));
+		deckList.addAll(Utils.createCard(CardName.SIGNAL_PEST, CardClassification.COST_1, 4));
+		deckList.addAll(Utils.createCard(CardName.VAULT_SKIRGE, CardClassification.COST_1, 4));
+		
+		deckList.addAll(Utils.createCard(CardName.MEMNITE, CardClassification.COST_0, 4));
+		deckList.addAll(Utils.createCard(CardName.ORNITHOPTER, CardClassification.COST_0, 4));
+		deckList.addAll(Utils.createCard(CardName.CHALICE_VOID, CardClassification.COST_0, 2));
+		deckList.addAll(Utils.createCard(CardName.WELDING_JAR, CardClassification.COST_0, 4));
+
+		deckList.addAll(Utils.createCard(CardName.MOX_OPAL, CardClassification.MANA_SOURCE_M, 4));
+		deckList.addAll(Utils.createCard(CardName.SPRINGLEAF_DRUM, CardClassification.MANA_SOURCE_N, 4));
 		
 		return deck;
 	}
