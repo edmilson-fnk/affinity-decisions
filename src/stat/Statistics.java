@@ -17,16 +17,16 @@ import mtg.utils.Lists;
 public class Statistics {
 
 	public static void main(String[] args) {
-//		Deck deck = Lists.affinity();
-		Deck deck = Lists.trueAffinity();
+		Deck deck = Lists.affinity();
+//		Deck deck = Lists.trueAffinity();
 //		Deck deck = Lists.burn();
 		
 		Map<String, Float> probs = getProbabilities(deck);
 		
 //		greaterThan(probs);
-//		topN(probs);
+		topN(probs);
 		
-		String hand = ".*0.*0.*0.*";
+		String hand = ".*0.*B.*L.*L.*M.*";
 //		String hand = "0.*B.*L.*M.*N.*";
 		Float p = getHandProbability(probs, hand);
 		System.out.println(String.format(Locale.ENGLISH, "Probability of hand {" + hand + "}: %.5f%%", p*100));
